@@ -1,0 +1,232 @@
+.grid-container {
+  padding: 1px;
+  height: max-content;
+  overflow: hidden;
+
+  .grid-toolbar,
+  .toolbar-view {
+    height: 45px;
+    padding: 10px;
+    margin: 5px;
+    margin-bottom: 0px;
+    background-color: gray;
+    text-align: right;
+  }
+  .grif-info-image {
+    text-align: center;
+    width: 60px;
+    height: 60px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .grid-btn {
+    border: 1px rgb(207, 203, 203) solid;
+    height: 20px;
+    margin: 5px;
+    background-color: white;
+    background-position: left;
+    background-repeat: no-repeat;
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+    border-radius: 10px;
+    white-space: nowrap;
+  }
+
+  .grid-add-btn {
+    background-image: url("../assets/images/add.jpg");
+    background-size: 22px;
+    padding: 8px 8px 5px 35px;
+  }
+
+  .grid-approved-btn {
+    background-image: url("../assets/images/Approved.svg");
+    background-size: 20px;
+    padding: 8px 8px 5px 28px;
+  }
+
+  .grid-articles-btn {
+    background-size: 22px;
+    padding: 8px 10px 8px 10px;
+  }
+
+  .grid-delete-btn {
+    background-image: url("../assets/images/delete.jpg");
+    background-size: 22px;
+    padding: 8px 8px 5px 35px;
+  }
+
+  .footer-grid-row {
+    background-color: rgb(183, 183, 209);
+    height: 50px;
+    .footer-recorde-number {
+      margin: 12px;
+    }
+  }
+  .grid-refresh-btn {
+    //  background-image: url("../assets/images/delete.jpg");
+    background-size: 22px;
+    padding: 5px;
+    height: 35px;
+    float: right;
+    position: relative;
+  }
+  .grid-categories-btn {
+    background-size: 22px;
+    padding: 5px 8px 5px 8px;
+  }
+  .grid-edit-btn {
+    background-image: url("../assets/images/edit.png");
+    background-size: 30px;
+    padding: 8px 8px 5px 35px;
+  }
+  .grid-body {
+    padding: 1px;
+    margin: 5px;
+    margin-top: 0px;
+    overflow: hidden;
+    display: flow-root;
+    font-size: 14px;
+    .grid-data-empty {
+      width: 100%;
+      color: #2c3e50;
+      height: 50px;
+      text-align: center;
+      vertical-align: middle;
+      padding: 10px;
+    }
+
+    .grid-body-content {
+      height: max-content;
+      max-height: 300px;
+      overflow: hidden;
+      overflow-y: auto;
+      position: relative;
+      border: 1px gray solid;
+    }
+
+    .grid-row-selected {
+      background-color: rgb(215, 190, 240);
+      div {
+        background-color: rgb(215, 190, 240);
+      }
+    }
+    .grid-row {
+      width: 100%;
+      overflow: hidden;
+      border-bottom: 1px gray dotted;
+      //float: left;
+      // position: relative;
+      &.header-row {
+        background-color: blue;
+        div {
+          padding: 5px;
+          background-color: inherit;
+          color: white;
+          font-size: 14px;
+          font-weight: 600;
+        }
+      }
+
+      [class^="grid-col-"],
+      .grid-row-number {
+        float: right;
+        border: 1px 0px 1px 1px gray dotted;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        min-width: 20px;
+        min-height: 30px;
+        padding: 2px;
+      }
+
+      .grid-delete-btn:hover,
+      .grid-add-btn:hover {
+        font-weight: 600;
+      }
+
+      .grid-col-1 {
+        width: 100%;
+      }
+      .grid-col-2 {
+        width: calc(100% / 2);
+        &.col-width-2 {
+          width: calc((100% / 3) * 2);
+        }
+        &.col-width-1 {
+          width: calc(100% / 3);
+        }
+      }
+      .grid-col-3 {
+        width: calc(100% / 3);
+        &.col-width-2 {
+          width: calc((100% / 4) * 2);
+        }
+        &.col-width-1 {
+          width: calc(100% / 4);
+        }
+      }
+      .grid-col-4 {
+        width: calc(100% / 4);
+        &.col-width-2 {
+          width: calc((100% / 5) * 2);
+        }
+        &.col-width-1 {
+          width: calc(100% / 5);
+        }
+      }
+      .grid-col-5 {
+        width: calc(100% / 5);
+        &.col-width-2 {
+          width: calc((100% / 6) * 2);
+        }
+        &.col-width-1 {
+          width: calc(100% / 6);
+        }
+      }
+      .grid-col-6 {
+        width: calc(100% / 6);
+        &.col-width-2 {
+          width: calc((100% / 7) * 2);
+        }
+        &.col-width-1 {
+          width: calc(100% / 7);
+        }
+      }
+
+      .grid-col-7 {
+        width: calc(100% / 7);
+        &.col-width-2 {
+          width: calc((100% / 8) * 2);
+        }
+        &.col-width-1 {
+          width: calc(100% / 8);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .grid-btn {
+    margin: 0px;
+  }
+  .grid-edit-btn {
+    background-size: 28px;
+    padding: 8px 8px 5px 35px;
+  }
+
+  .grid-toolbar {
+    overflow: hidden;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  // .grid-body-content{
+  //   overflow: hidden;
+  //   overflow-x:auto;
+  //   white-space: nowrap;
+  // }
+}

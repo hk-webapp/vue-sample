@@ -1,0 +1,49 @@
+.list-view-container {
+  height: max-content;
+  border: 1px red solid;
+  width: 100%;
+  .toolbar-view {
+    width: 100%;
+
+    .list-view-btn .list-view-add-btn {
+      background-size: 20px;
+      padding: 5px 8px 5px 8px;
+    }
+    .list-view-btn {
+      border: 1px rgb(207, 203, 203) solid;
+      height: 20px;
+      margin: 5px;
+      background-color: white;
+      background-position: left;
+      background-repeat: no-repeat;
+      font-size: 14px;
+      font-weight: 400;
+      cursor: pointer;
+      border-radius: 10px;
+    }
+
+    .ist-view-body-content {
+      width: 100%;
+      border: 1px red solid;
+      text-align: right;
+      .list-view-row {
+        width: 100%;
+        .list-view-row-number{
+          width: 10%;
+        }
+        .list-view-row-data{
+          width: 90%;
+          float: left;
+
+          .list-view-col{
+            width: 80px;
+            font-size: 600;
+          }
+          .list-view-text{
+            width: 250px;
+          }
+        }
+      }
+    }
+  }
+}
